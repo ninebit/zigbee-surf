@@ -1,0 +1,20 @@
+Zigbee-Surf
+
+This is an adaption of Freakduino code for scanning multiple zigbee channels.
+
+See the Freakduino website for background information and files:
+http://freaklabs.org/index.php/Blog/Store/Announcing-the-Freakduino-Chibi-An-Arduino-based-Board-For-Wireless-Sensor-Networking.html
+
+Contents:
+zigbee-surf.pde - Arduino file containing the channel surfing source code and additional instructions
+
+Requirements:
+Chibi library available from above site.
+TimedAction available from http://arduino.cc
+
+Description:
+
+This code adapts the wsbridge example code as part of the chibi library to add channel scanning.  By default it scans through channels 0x0b-0x1a incrementing once a second.
+When data is found, channel rotation is suspended 30 seconds to allow further collection of data.
+
+TODO: add better support for reporting current listening channel that does not interfere with wsbridge and Wireshark.
